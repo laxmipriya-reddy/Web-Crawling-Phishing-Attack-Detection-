@@ -1,0 +1,17 @@
+{% extends 'userbase.html' %}
+{% block content %}
+
+<center>
+<h2>Prediction of Phishing Wesite</h2>
+<br>
+
+
+<table id="tab" width="70%">
+<form method="post" action="/getprediction">
+	{% csrf_token %}
+
+<tr><td><input type="text"  name="url" required class="form-control">
+<tr><td><input type="submit" value="Prediction">
+</form>
+</table>
+{% endblock %}
